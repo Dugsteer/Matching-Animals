@@ -20,7 +20,6 @@ function bugify(){
   bugbuzz.play();
   new BugController({'minBugs':10, 'maxBugs':15, 'mouseOver':'die'});
   new SpiderController({'minBugs':3, 'maxBugs':6, 'mouseOver':'die'});
-  new BugDispatch({'end':1000})
 
 }
 

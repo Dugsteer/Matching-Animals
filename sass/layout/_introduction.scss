@@ -138,6 +138,11 @@
     display: none;
 }
 
+.bugflash img{
+    width: 100%;
+    height: 100%;
+}
+
 .bugheading {
     position: absolute;
     width: 285px;
@@ -149,7 +154,16 @@
     z-index: 3;
     font-family: Bangers;
     color: $color-yellow;
+    background-color: #fff;
     font-size: 5rem;
+
+    @media only screen and(max-width:$bp-large){
+        left: 25%;
+    }
+
+    @media only screen and(max-width:$bp-large){
+        left: 25%;
+    }
 }
 .bugbutton {
     position: absolute;
