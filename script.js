@@ -5,24 +5,34 @@ const extra = document.getElementById('info');
 const mainpic = document.getElementById('mainpic');
 const blue = window.matchMedia("(max-width: 800px)");
 const tigeypic = document.getElementById('tigeypic');
+const flash = document.getElementById('flash');
 
-//
+//Add Bugs
+function flashAlert(){
+  flash.classList.add('bugvisible');
+
+}
+
 function bugify(){
-  new BugController({'minBugs':10, 'maxBugs':20, 'mouseOver':'die'});
-  new SpiderController({'minBugs':2, 'maxBugs':6, 'mouseOver':'die'});
-}
-
-//play sound
-
-function roarer(){
-    
-    mainpic.innerHTML = '<img src="img/tiger1.png" id="tigeypic" alt="decorative">';
-    tigeypic.classList.remove('rightmove');
+  setTimeout(flashAlert, 4000);
+  const bugbuzz = new Audio('sounds/bugbuzz.mp3');
+  bugbuzz.loop = true;
+  bugbuzz.play();
+  new BugController({'minBugs':10, 'maxBugs':15, 'mouseOver':'die'});
+  new SpiderController({'minBugs':3, 'maxBugs':6, 'mouseOver':'die'});
+  new BugDispatch({'end':1000})
 
 }
 
+//Kill All Bugs
 function bugsGo(){
   window.location.reload();
+}
+
+//Make Tigey Roar
+function roarer(){
+  mainpic.innerHTML = '<img src="img/tiger1.png" id="tigeypic" alt="decorative">';
+  tigeypic.classList.remove('rightmove');
 }
 
 function changetiger(){
@@ -31,7 +41,6 @@ function changetiger(){
     mainpic.innerHTML = '<img src="img/tiger2.png" id="tigeypic" alt="decorative">' 
     tigeypic.classList.add('rightmove');
     setTimeout(roarer, 2000);
-    setTimeout(bugsGo, 2000);
 }
 
 // Show and hide about info
@@ -52,7 +61,7 @@ function myFunction(x) {if (blue.matches) {sidey.classList.remove("block");}}
 function toggler() {sidey.classList.toggle("block");}
 myFunction(blue);
 
-
+//GAME FUNCTIONALITY
 // There are three different sets of words/images used in the game
 const firstSet = document.getElementById("set1");
 const secondSet = document.getElementById("set2");

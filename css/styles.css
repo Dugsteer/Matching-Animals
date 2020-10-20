@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 *,
 *::after,
 *,
@@ -451,6 +452,7 @@ h4 {
     fill: #7ebc59; }
 
 .introduction {
+  position: relative;
   grid-row: 1/2;
   grid-column: 2/3;
   width: 800px;
@@ -481,7 +483,7 @@ h4 {
       grid-row: 2/3;
       justify-content: center;
       width: 360px;
-      height: 78np0px;
+      height: 780px;
       flex-direction: column; } }
   .introduction a {
     display: inline;
@@ -550,6 +552,44 @@ h4 {
     .introduction__set:active {
       transform: translateY(2px);
       box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1); }
+
+.bugflash {
+  position: absolute;
+  transform: rotate(-20deg);
+  display: none; }
+
+.bugheading {
+  position: absolute;
+  width: 285px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  top: 30%;
+  left: 20%;
+  z-index: 3;
+  font-family: Bangers;
+  color: #ffe164;
+  font-size: 5rem; }
+
+.bugbutton {
+  position: absolute;
+  left: 35%;
+  top: 60%;
+  height: 30px;
+  width: 120px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
+  cursor: pointer; }
+
+.bugvisible {
+  display: block; }
+
+.bugbutton:hover {
+  transform: translateY(2px);
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1); }
 
 .links {
   margin-top: 3rem; }

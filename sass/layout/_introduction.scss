@@ -1,4 +1,5 @@
 .introduction {
+    position: relative;
     grid-row: 1/2;
     grid-column: 2/3;
     width: 800px;
@@ -131,6 +132,48 @@
       }
 }
 
+.bugflash {
+    position: absolute;
+    transform: rotate(-20deg);
+    display: none;
+}
+
+.bugheading {
+    position: absolute;
+    width: 285px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    top: 30%;
+    left:20%;
+    z-index: 3;
+    font-family: Bangers;
+    color: $color-yellow;
+    font-size: 5rem;
+}
+.bugbutton {
+    position: absolute;
+    left: 35%;
+    top: 60%;
+    height: 30px;
+    width: 120px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: $box-shadow-large;
+    cursor: pointer;
+
+}
+
+.bugvisible {
+    display: block;
+}
+
+.bugbutton:hover {
+    transform: translateY(2px);
+    box-shadow: $box-shadow-small;
+}
 .links {
     margin-top: 3rem;
 }
