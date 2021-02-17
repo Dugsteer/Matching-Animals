@@ -59,11 +59,21 @@ h4 {
 
 .sense {
   grid-row: 1/2;
-  grid-column: 2/3; }
+  grid-column: 2/3;
+  width: 100%; }
+  @media only screen and (max-width: 37.5em) {
+    .sense {
+      grid-row: 2/3;
+      grid-column: 1/2; } }
 
 .sense-bottom {
   grid-row: 5/6;
-  grid-column: 2/3; }
+  grid-column: 2/3;
+  width: 100%; }
+  @media only screen and (max-width: 37.5em) {
+    .sense-bottom {
+      grid-row: 5/6;
+      grid-column: 1/2; } }
 
 .loader-div {
   background-color: #368cbf;
@@ -477,15 +487,13 @@ h4 {
       height: 550px; } }
   @media only screen and (max-width: 37.5em) {
     .introduction {
-      grid-row: 2/3;
+      grid-row: 3/4;
       justify-content: center;
       width: 400px;
       height: 720px;
       flex-direction: column; } }
   @media only screen and (max-width: 28em) {
     .introduction {
-      grid-row: 2/3;
-      justify-content: center;
       width: 360px;
       height: 780px;
       flex-direction: column; } }
